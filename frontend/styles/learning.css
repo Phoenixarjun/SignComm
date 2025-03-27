@@ -1,0 +1,80 @@
+.learning-container{
+  min-height: 80vh;
+  width: 100%;
+}
+.learning-banner{
+  background-image: url();
+  background:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../public/images/learning.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.learning-banner h1{
+  color: white;
+  font-size: 2.5rem;
+}
+.learning-banner p{
+  color: white;
+  font-size: 1.2rem;
+}
+.signs-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.search-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #090909cf;
+  width: 50vw;
+  padding: 10px 20px;
+}
+.searchSign {
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+}
+
+.searchSign:focus {
+  border-color: #007bff;
+}
+
+.searchIcon {
+  cursor: pointer;
+}
+.sign-gif-container{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sign-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+.sign-gif{
+  width: 300px;
+  object-fit: contain;
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
