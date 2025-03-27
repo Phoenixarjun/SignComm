@@ -35,7 +35,6 @@ document.getElementById('speakerButton').addEventListener('click', function () {
 });
 
 
-
 document.getElementById('runTestBtn').addEventListener('click', function () {
     const loadingMessage = document.getElementById('loadingMessage');
     loadingMessage.textContent = 'Processing...';
@@ -73,7 +72,10 @@ document.getElementById('runTestBtn').addEventListener('click', function () {
     })
     .then(geminiData => {
         const resultContainer = document.getElementById('resultContainer');
+        const fromText = document.querySelector('.from-text');
+        
         resultContainer.innerHTML = `<p>${geminiData.generated_text}</p>`;
+        fromText.value = geminiData.generated_text;
     })
     .catch(error => {
         console.error('Error:', error);

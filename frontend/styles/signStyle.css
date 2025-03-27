@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .content{
-  height: 100vh;
+  height: 100%;
   background-color: rgb(35, 42, 83);
   display: flex;
   justify-content: center;
@@ -12,6 +12,7 @@
   flex-direction: column;
   color: white;
   gap: 20px;
+  padding: 10%;
 }
 button{
   padding: 10px 20px;
@@ -50,3 +51,38 @@ button{
 .speaker-icon{
   cursor: pointer;
 }
+
+/* Translation Section Styles */
+.translation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.language-dropdown {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #15C39A;
+  background-color: #f8f9fa;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-dropdown:hover {
+  border-color: #0fa37f;
+  box-shadow: 0 0 10px rgba(21, 195, 154, 0.3);
+}
+
