@@ -39,7 +39,13 @@
     </header>
     <div class="content">
         <h1>A real-time sign language translation system for seamless communication.</h1>
-        <button id="runTestBtn">Generate</button>
+        <div class="video-container">
+            <img id="videoFeed" src="" alt="Video Feed">
+        </div>
+        <div class="controls">
+            <button class="control-btn" id="startButton"><i class="fas fa-play"></i> Start Recognition</button>
+            <button clas="control-btn" id="stopButton"><i class="fas fa-stop"></i> Stop Recognition</button>
+        </div>
     
         <h2>Outputs:</h2>
         
@@ -99,4 +105,3 @@
     <script src="{{ url_for('static', filename='scripts/translate.js') }}"></script>
 </body>
 </html>
-
