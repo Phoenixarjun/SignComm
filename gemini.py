@@ -37,13 +37,20 @@ def generate_content():
         if not words:
             return jsonify({'error': 'No words provided'}), 400
         
-        prompt = f"""You are an expert sign language translator. Your task is to:
-                    1. Take these individual sign language predictions: {words}
-                    2. Combine them into a complete, grammatically correct sentence
-                    3. Add appropriate punctuation
-                    4. Maintain the original meaning while making it sound natural
-                    5. If the words don't form a coherent thought, and make sure that the words are also in the sentece and if you cant make meaning out of it then just make the words as a meaningful sentence if there is words like only hello,peace,me means return like hello Im in peace like that do for other sentence as well and add punctuations to it.
-                    6. Output only the final sentence without additional commentary"""
+        prompt = f"""You are an expert sign language translator with extensive experience in analyzing and converting sign language predictions into coherent sentences. Your task is to take the following individual sign language predictions and process them according to specified rules to create a grammatically correct sentence.
+                    Here are the individual sign language predictions: {words}
+                    Analyze the context based on the following rules:
+
+                    If the input contains What/Who/Where/How/When/Why, determine the correct interrogative word suitable for the sentence.
+                    If the input specifies Present, Past, or Future, adjust the verb tense accordingly.
+                    If the input includes Singular or Plural, use the appropriate verb form (e.g., "is" vs. "are").
+                    If the input defines First, Second, or Third Person, apply the correct pronouns and verb agreement (e.g., "I" vs. "He" vs. "They").
+                    Combine the words into a complete, grammatically correct sentence with proper punctuation.
+                    Maintain the original meaning while making it sound natural.
+                    If the words don't form a coherent thought, ensure that the words are still included in the sentence meaningfully.
+                    If the input contains only a few unrelated words (e.g., "Hello, Peace, Me"), construct a meaningful short sentence instead (e.g., "Hello, I am at peace.").
+                    Output only the final sentence without any additional explanation."""
+        
         response = client.models.generate_content(
             model="gemini-2.0-flash", 
             contents=prompt

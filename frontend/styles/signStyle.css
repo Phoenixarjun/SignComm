@@ -5,7 +5,11 @@
 }
 .content{
   height: 100%;
-  background-color: rgb(35, 42, 83);
+  /* background-color: rgb(35, 42, 83); */
+  background:  linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../public/images/modestas-urbonas-vj_9l20fzj0-unsplash.jpg);
+  background-position: center;
+  background-size:cover;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,16 +63,35 @@ button{
   background-color: #000;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.video-container.with-placeholder {
+  background-image: url('../public/images/placeholder-video.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #videoFeed {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none; /* Initially hidden */
 }
 
+.video-container.active #videoFeed {
+  display: block; /* Show when active */
+}
+
+.video-container.active.with-placeholder {
+  background-image: none; /* Remove placeholder when active */
+}
 .controls{
   display: flex;
   justify-content: space-between;

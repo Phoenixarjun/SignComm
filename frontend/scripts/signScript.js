@@ -1,12 +1,13 @@
 const toggleBtn = document.querySelector('.toggle_btn');
 const navbar = document.querySelector('.navbar');
-const startButton = document.getElementById('startButton');  // Changed from startBtn
-const stopButton = document.getElementById('stopButton');    // Changed from stopBtn
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
 const videoContainer = document.querySelector('.video-container');
 const resultContainer = document.getElementById('resultContainer');
 const loadingMessage = document.getElementById('loadingMessage');
 const videoFeed = document.getElementById('videoFeed');
 const speakerButton = document.getElementById('speakerButton');
+
 
 // Toggle navbar for mobile
 toggleBtn.addEventListener('click', function () {
@@ -16,6 +17,9 @@ toggleBtn.addEventListener('click', function () {
 // Start sign recognition
 startButton.addEventListener('click', async function () {
     try {
+        const fromText = document.querySelector('.from-text'); // need some adjustments
+        resultContainer.textContent = "";
+        fromText.textContent = "";
         loadingMessage.textContent = 'Starting recognition...';
         startButton.disabled = true;
         stopButton.disabled = false;
@@ -31,6 +35,8 @@ startButton.addEventListener('click', async function () {
         
         if (data.status === 'started') {
             // Start showing video feed
+            videoContainer.classList.remove('with-placeholder');
+            videoContainer.classList.add('active');
             videoFeed.src = "/video_feed";
             loadingMessage.textContent = 'Recognition started - perform signs in front of camera';
         } else {
@@ -60,18 +66,13 @@ stopButton.addEventListener('click', async function () {
         const data = await response.json();
         
         if (data.status === 'success') {
-            // Stop video feed
+            // Stop video feed and show placeholder
+            videoContainer.classList.remove('active');
+            videoContainer.classList.add('with-placeholder');
             videoFeed.src = "";
             
             // Display results
-            console.log(recognized_signs);
-            // resultContainer.innerHTML = `
-            //     <h3>Recognized Signs:</h3>
-            //     <p>${data.recognized_signs || 'No signs recognized'}</p>
-            //     <h3>Gemini Response:</h3>
-            //     <p>${data.generated_text}</p>
-            // `;
-            resultContainer.innerHTML = `<p>${data.generated_text}</p>`
+            resultContainer.innerHTML = `<p>${data.generated_text}</p>`;
             
             // Update translation input if exists
             const fromText = document.querySelector('.from-text');
@@ -94,7 +95,6 @@ stopButton.addEventListener('click', async function () {
 
 // Text-to-speech functionality
 speakerButton.addEventListener('click', function () {
-    // Get the last paragraph in resultContainer (Gemini response)
     const resultParagraphs = resultContainer.querySelectorAll('p');
     const resultText = resultParagraphs.length > 0 ? 
         resultParagraphs[resultParagraphs.length - 1].textContent.trim() : '';
