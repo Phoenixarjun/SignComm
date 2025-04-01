@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/navbar.css">
-    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/learning.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -20,16 +19,16 @@
 
 <body>
     <header>
-        <div class="logo"><a href="../index.html">Sign<span>Comm</span></a></div>
+        <div class="logo"><a href="./index.html">Sign<span>Comm</span></a></div>
         <div class="navbar">
             <ul class="links">
-                <li><a href="#" class="nav-btn">Home</a></li>
-                <li><a href="#" class="nav-btn">About</a></li>
-                <li><a href="#" class="nav-btn">Services</a></li>
-                <li><a href="#" class="nav-btn">Contact</a></li>
-                <li><a href="./components/contribute.html" class="nav-btn">Contribution</a></li>
+                <li><a href="hero" class="nav-btn">Home</a></li>
+                <li><a href="about" class="nav-btn">About</a></li>
+                <li><a href="#doid" class="nav-btn">Services</a></li>
+                <li><a href="#footer" class="nav-btn">Contact</a></li>
+                <li><a href="./frontend/components/contribute.html" class="nav-btn">Contribution</a></li>
             </ul>
-            <div class="profile">
+            <div id="profile">
                 <img src="https://srcwap.com/wp-content/uploads/2022/08/abstract-user-flat-4.png" width="50" height="50">
             </div>
         </div>
@@ -37,6 +36,27 @@
             <i id="barIcon" class="fa-solid fa-bars"></i>
         </div>
     </header>
+    <profile id="profileContainer">
+        <div id="profileOptionsContainer" class="profileOptions">
+            <a id="loginBtn" href="./frontend/components/Login.html" class="profile-link">
+                <i class="fa-solid fa-user"></i>
+                <p>Login</p>
+            </a> 
+            <a id="registerBtn" href="./frontend/components/Register.html" class="profile-link">
+                <i class="fa-solid fa-user-plus"></i>
+                <p>Register</p>
+            </a> 
+        </div>
+        <div class="profileDetails" style="display: none;">
+            <h3 class="profile-heading">Profile</h3>
+            <p class="profile-info">Username: <span id="usernameDisplay"></span></p>
+            <p class="profile-info">Email: <span id="emailDisplay"></span></p>
+        </div>
+        <a id="logout" style="display: none;" class="profile-link logout-link">
+            <i class="fa-solid fa-user-slash"></i>
+            <p>Logout</p>
+        </a>
+    </profile>
     <div class="learning-container">
       <div class="learning-banner">
         <h1>SignLearn</h1>
@@ -97,6 +117,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="../scripts/script.js"></script>
+    <script type="module" src="../scripts/profile.js"></script>
     <script src="../scripts/learning.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

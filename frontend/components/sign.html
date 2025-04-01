@@ -19,24 +19,44 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="./index.html">Sign<span>Comm</span></a>
-        </div>
+        <div class="logo"><a href="./index.html">Sign<span>Comm</span></a></div>
         <div class="navbar">
             <ul class="links">
                 <li><a href="hero" class="nav-btn">Home</a></li>
                 <li><a href="about" class="nav-btn">About</a></li>
-                <li><a href="services" class="nav-btn">Services</a></li>
-                <li><a href="contact" class="nav-btn">Contact</a></li>
-                <li>
-                    <a href="./components/contribute.html" class="nav-btn">Contribution</a>
-                </li>
+                <li><a href="#doid" class="nav-btn">Services</a></li>
+                <li><a href="#footer" class="nav-btn">Contact</a></li>
+                <li><a href="./frontend/components/contribute.html" class="nav-btn">Contribution</a></li>
             </ul>
+            <div id="profile">
+                <img src="https://srcwap.com/wp-content/uploads/2022/08/abstract-user-flat-4.png" width="50" height="50">
+            </div>
         </div>
         <div class="toggle_btn">
             <i id="barIcon" class="fa-solid fa-bars"></i>
         </div>
     </header>
+    <profile id="profileContainer">
+        <div id="profileOptionsContainer" class="profileOptions">
+            <a id="loginBtn" href="./frontend/components/Login.html" class="profile-link">
+                <i class="fa-solid fa-user"></i>
+                <p>Login</p>
+            </a> 
+            <a id="registerBtn" href="./frontend/components/Register.html" class="profile-link">
+                <i class="fa-solid fa-user-plus"></i>
+                <p>Register</p>
+            </a> 
+        </div>
+        <div class="profileDetails" style="display: none;">
+            <h3 class="profile-heading">Profile</h3>
+            <p class="profile-info">Username: <span id="usernameDisplay"></span></p>
+            <p class="profile-info">Email: <span id="emailDisplay"></span></p>
+        </div>
+        <a id="logout" style="display: none;" class="profile-link logout-link">
+            <i class="fa-solid fa-user-slash"></i>
+            <p>Logout</p>
+        </a>
+    </profile>
     <div class="content">
         <h1>A real-time sign language translation system for seamless communication.</h1>
         <div class="video-container with-placeholder">
@@ -101,6 +121,7 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="{{ url_for('static', filename='scripts/script.js') }}"></script> -->
     <script src="{{ url_for('static', filename='scripts/signScript.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/translate.js') }}"></script>
 </body>

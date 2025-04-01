@@ -280,17 +280,29 @@
             <div class="fotter-line"></div>
             <div class="footer-right">
                 <form action="#" id="submitForm">
-                    <h2>Let's Stay Connected!!</h2>
+                    <h2>Let's Stay Connected!</h2>
+                    
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="email" required id="email">
-                        <label>Email</label>
+                        <label>Your Email Address</label>
                     </div>
+                    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
+                        <textarea id="feedback" rows="3" required></textarea>
+                        <label>Your Feedback or Message to Us</label>
+                    </div>
+                    
                     <div class="login-status"></div>
-                    <h3>Privacy Policy</h3>
-                    <label class="checked-label"><input type="checkbox">I have read the Privacy Policy and I give my
-                        consent to the processing of my personal data.</label>
-                    <button type="submit" class="btn" id="signinBtn">Submit</button>
+                    
+                    <h3>Privacy Commitment</h3>
+                    <label class="checked-label">
+                        <input type="checkbox" required> 
+                        I've read and agree to the Privacy Policy, and consent to the processing of my personal data.
+                    </label>
+                    
+                    <button type="submit" class="btn" id="signinBtn">Send Message</button>
                 </form>
             </div>
         </div>

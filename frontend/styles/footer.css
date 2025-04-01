@@ -1,4 +1,3 @@
-
 footer {
   background-color: #24282c;
   display: flex;
@@ -37,11 +36,13 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 form h2 {
   font-size: 30px;
   color: white;
+  margin-bottom: 20px;
 }
 
 .input-box {
@@ -52,7 +53,27 @@ form h2 {
   margin: 30px 0;
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+}
+
+/* Style for both input and textarea */
+.input-box input, 
+.input-box textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.input-box input {
+  height: 5vh;
+}
+
+.input-box textarea {
+  resize: none;
+  min-height: 80px;
 }
 
 .input-box label {
@@ -62,33 +83,53 @@ form h2 {
   pointer-events: none;
   transition: .5s;
   font-size: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.input-box input {
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 5vh;
-  color: white;
+.input-box textarea ~ label {
+  top: 25px;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
   top: -20px;
+  font-size: 16px;
+  color: #15C39A;
 }
 
 form h3 {
   font-size: 20px;
   color: white;
+  margin-top: 20px;
 }
 
 .checked-label {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
   color: #e6e6e673;
+  margin: 15px 0;
+}
+
+.btn {
+  background-color: #15C39A;
+  color: white;
+  border: none;
+  padding: 12px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #0fa37d;
 }
 
 .footer-two {
@@ -151,47 +192,43 @@ form h3 {
   text-align: center;
 }
 
-
-
-
-
 @media (max-width:750px) {
   .footer-one {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .fotter-line {
-      height: 1px;
-      width: 60vw;
+    height: 1px;
+    width: 60vw;
   }
 
   form h2 {
-      text-align: center;
+    text-align: center;
   }
 
   .footer-two {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .footer-two ul {
-      align-items: center;
-      justify-content: center
+    align-items: center;
+    justify-content: center;
   }
-
 }
 
 @media (max-width:470px) {
   .footer-two ul {
-      gap: 50px;
+    gap: 50px;
   }
 
   .footer-three ul {
-      gap: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
+  .input-box textarea ~ label {
+    top: 15px;
+  }
 }
-
-
-
