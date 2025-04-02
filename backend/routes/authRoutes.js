@@ -9,6 +9,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDir = path.resolve(__dirname, "../../frontend/components");
 
+// Serve index.html when "/" is accessed
+router.get("/", (req, res) => {
+  res.sendFile("index.html", { root: publicDir });
+});
+
 // Login Page
 router.get("/login", (req, res) => {
   res.sendFile("login.html", { root: publicDir });
@@ -17,6 +22,22 @@ router.get("/login", (req, res) => {
 // Register Page
 router.get("/register", (req, res) => {
   res.sendFile("register.html", { root: publicDir });
+});
+
+// Contribute Page
+router.get("/contribute", (req, res) => {
+  res.sendFile("contribute.html", { root: publicDir });
+});
+
+// Sign Page
+router.get("/sign", (req, res) => {
+  res.sendFile("sign.html", { root: publicDir });
+});
+
+
+// Register Page
+router.get("/learn", (req, res) => {
+  res.sendFile("learn.html", { root: publicDir });
 });
 
 // Handle Email Sign-in
@@ -47,7 +68,6 @@ router.post("/signup", async (req, res) => {
     res.status(400).json({ success: false, message: error.message });
   }
 });
-
 
 // Google Sign-In (Dummy)
 router.get("/auth/google", async (req, res) => {

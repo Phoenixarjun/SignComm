@@ -1,8 +1,8 @@
 const checkAuth = () => {
-  const token = localStorage.getItem("jwtToken");
+  const token = localStorage.getItem("authToken");
 
   if (!token) {
-      window.location.href = "/login.html";
+      window.location.href = "/login";
   } else {
       console.log("User is authenticated.");
   }

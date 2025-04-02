@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+import { getDatabase, set, ref, push } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 import { 
     getAuth, 
     signInWithEmailAndPassword, 
@@ -153,5 +153,75 @@ export const emailSignUp = async (username, email, password, confirmPassword) =>
 
         console.error("Email Sign-Up Error:", errorMessage);
         return { success: false, message: errorMessage };
+    }
+};
+
+// Function to store feedback in Firebase Database
+export const saveFeedback = async (user, username, email, feedback) => {
+    try {
+        // Store user info separately in 'users/' with UID
+        const userRef = ref(database, `users/${user.uid}`);
+        await set(userRef, {
+            username: username || user.displayName,
+            email: email || user.email,
+        });
+
+        // Generate a unique ID for each feedback
+        const feedbackRef = ref(database, "contacts");
+        const newFeedbackRef = push(feedbackRef); // Generates unique ID
+
+        await set(newFeedbackRef, {
+            userId: user.uid, // Link feedback to user
+            username, // Store username
+            email,
+            feedback,
+            timestamp: new Date().toISOString(),
+        });
+
+        return { success: true, message: "Feedback saved successfully!" };
+    } catch (error) {
+        console.error("Error saving feedback:", error.message);
+        return { success: false, message: "Failed to save feedback. Try again!" };
+    }
+};
+
+
+export const saveContributors = async (name, email, contactNo, levelOfUnderstanding, proof, yearOfExp) => {
+    try {
+        const user = auth.currentUser;
+
+        if (!user) {
+            throw new Error("User is not authenticated");
+        }
+
+        // Save user info if not already saved
+        const userRef = ref(database, `users/${user.uid}`);
+        await set(userRef, {
+            Contributername: name,
+            email: email,
+        });
+
+        // Save contribution details
+        const contributeRef = ref(database, "contributors");
+        const newContributeRef = push(contributeRef);
+        
+        await set(newContributeRef, {
+            userId: user.uid,
+            Contributername: name,
+            email,
+            contactNo,
+            levelOfUnderstanding,
+            proof,
+            yearOfExp,
+            timestamp: new Date().toISOString()
+        });
+
+        return { success: true, message: "Thank you for your contribution!" };
+    } catch (error) {
+        console.error("Error saving contributor:", error);
+        return { 
+            success: false, 
+            message: error.message || "Failed to save contribution. Please try again." 
+        };
     }
 };

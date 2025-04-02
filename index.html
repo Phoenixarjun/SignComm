@@ -25,7 +25,7 @@
                 <li><a href="about" class="nav-btn">About</a></li>
                 <li><a href="#doid" class="nav-btn">Services</a></li>
                 <li><a href="#footer" class="nav-btn">Contact</a></li>
-                <li><a href="./frontend/components/contribute.html" class="nav-btn">Contribution</a></li>
+                <li><a href="contribute" class="nav-btn">Contribution</a></li>
             </ul>
             <div id="profile">
                 <img src="https://srcwap.com/wp-content/uploads/2022/08/abstract-user-flat-4.png" width="50" height="50">
@@ -283,27 +283,35 @@
                     <h2>Let's Stay Connected!</h2>
                     
                     <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required id="username">
+                        <label>Username</label>
+                    </div>
+                    
+                    <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="email" required id="email">
                         <label>Your Email Address</label>
                     </div>
-                    
+                
                     <div class="input-box">
                         <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
                         <textarea id="feedback" rows="3" required></textarea>
                         <label>Your Feedback or Message to Us</label>
                     </div>
-                    
-                    <div class="login-status"></div>
+                
+                    <div class="login-status"></div> 
                     
                     <h3>Privacy Commitment</h3>
                     <label class="checked-label">
                         <input type="checkbox" required> 
                         I've read and agree to the Privacy Policy, and consent to the processing of my personal data.
                     </label>
-                    
-                    <button type="submit" class="btn" id="signinBtn">Send Message</button>
+                
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
+                
+                
             </div>
         </div>
         <div class="footer-two">
@@ -332,6 +340,13 @@
     <script src="./frontend/scripts/script.js"></script>
     <script type="module" src="./frontend/scripts/profile.js"></script>
     <script src="./backend/server.js"></script>
+    <script type="module" src="./backend/controllers/authController.js"></script>
+    <script type="module" src="./frontend/scripts/contact.js"></script>
+    <script src="./backend/middlewares/authMiddleware.js"></script>
+    <script src="./backend/routes/authRoutes.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

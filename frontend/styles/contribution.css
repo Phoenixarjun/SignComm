@@ -1,14 +1,206 @@
-.Contribution{
+/* Contribution Section - Enhanced Styles */
+.Contribution {
   width: 100%;
-  padding: 8%;
-  background:  linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../public/images/modestas-urbonas-vj_9l20fzj0-unsplash.jpg);
+  min-height: 100vh;
+  padding: 5% 8%;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+              url(../public/images/modestas-urbonas-vj_9l20fzj0-unsplash.jpg);
   background-position: center;
-  background-size:cover;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.contribution-heading{
+
+.contribution-heading {
   color: white;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2%;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contribution-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #15C39A;
+  border-radius: 3px;
+}
+
+.wrapper-Contribution {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(27, 37, 47, 0.9);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.wrapper-Contribution:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.form-box.login {
+  padding: 40px;
+}
+
+.contribute-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 15px 0 5px 0;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid,
+.input-box select:focus,
+.input-box select:valid {
+  border-bottom-color: #15C39A;
+}
+
+.input-box label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box select:focus ~ label,
+.input-box select:valid ~ label {
+  top: -5px;
+  font-size: 14px;
+  color: #15C39A;
+}
+
+.input-box select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.input-box select option {
+  background: #1B252F;
+  color: white;
+}
+
+.login-status {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: none;
+}
+
+.login-status.login-success {
+  display: block;
+  background: rgba(21, 195, 154, 0.1);
+  color: #15C39A;
+  border: 1px solid rgba(21, 195, 154, 0.3);
+}
+
+.login-status.login-failed {
+  display: block;
+  background: rgba(240, 29, 29, 0.1);
+  color: #f01d1d;
+  border: 1px solid rgba(240, 29, 29, 0.3);
+}
+
+.submit-btn {
+  background: #15C39A;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(21, 195, 154, 0.3);
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #0fa37e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(21, 195, 154, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .Contribution {
+    padding: 15% 5%;
+  min-height: auto;
+  }
+  
+  .contribution-heading {
+    font-size: 2rem;
+    margin-bottom: 5%;
+  }
+  
+  .form-box.login {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contribution-heading {
+    font-size: 1.8rem;
+  }
+  
+  .form-box.login {
+    padding: 25px 20px;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
 }

@@ -22,11 +22,11 @@
     <div class="logo"><a href="./index.html">Sign<span>Comm</span></a></div>
     <div class="navbar">
         <ul class="links">
-            <li><a href="hero" class="nav-btn">Home</a></li>
+            <li><a href="/" class="nav-btn">Home</a></li>
             <li><a href="about" class="nav-btn">About</a></li>
             <li><a href="#doid" class="nav-btn">Services</a></li>
             <li><a href="#footer" class="nav-btn">Contact</a></li>
-            <li><a href="./frontend/components/contribute.html" class="nav-btn">Contribution</a></li>
+            <li><a href="contribute" class="nav-btn">Contribution</a></li>
         </ul>
         <div id="profile">
             <img src="https://srcwap.com/wp-content/uploads/2022/08/abstract-user-flat-4.png" width="50" height="50">
@@ -61,33 +61,51 @@
       <h1 class="contribution-heading">Contribute DataSet for our Project!!</h1>
       <div class="wrapper-Contribution" id="Contribution-page">
         <div class="form-box login">
-          <form method="post" action="https://script.google.com/macros/s/AKfycbwnaPWlaF0IeyuXARNdJTVdLYeHcUe9gnqEAbp9o3HXmiiw184C60MasElCX7GM9zYG/exec" id="Registerform">
-            <div class="input-box">
-              <input type="text" name="Name" required id="username">
-              <label>Name</label>
-            </div>
-            <div class="input-box">
-              <input type="email" name="Email" required id="mail">
-              <label>Email</label>
-            </div>
-            <div class="input-box">
-              <input type="text" name="ContactNo." required>
-              <label>Contact No.</label>
-            </div>
-            <div class="input-box">
-              <input type="text" name="LevelOfUnderstanding"  required >
-              <label>Level Of Understanding</label>
-            </div>
-            <div class="input-box">
-              <input type="text" name="ProofOfSignLanguageProficiency" required>
-              <label>Proof Of Sign Language Proficiency</label>
-            </div>
-            <div class="input-box">
-              <input type="text" name="YearsOfExperience" required>
-              <label>Years Of Experience</label>
-            </div>
-            <button type="submit" class="submit-btn" >Submit</button>
-          </form>
+            <form id="contributeForm" class="contribute-form">
+                <div class="form-group">
+                    <div class="input-box">
+                        <input type="text" id="name" required>
+                        <label>Full Name</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="email" id="email" required>
+                        <label>Email Address</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="tel" id="contact" required>
+                        <label>Contact Number</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <select id="understanding" required>
+                            <option value="" disabled selected>Select your level</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Expert">Expert</option>
+                        </select>
+                        <label>Sign Language Proficiency</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="url" id="proof" required>
+                        <label>Proof of Proficiency (Google Drive Link)</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="number" id="experience" min="0" required>
+                        <label>Years of Experience</label>
+                    </div>
+                    
+                    <div class="login-status"></div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Submit Contribution
+                    </button>
+                </div>
+            </form>
         </div>
       </div>
     </div>
@@ -137,6 +155,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="../scripts/script.js"></script>
+    <script type="module" src="../scripts/contribute.js"></script>
     <script type="module" src="../scripts/profile.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
