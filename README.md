@@ -9,7 +9,7 @@
 
 Imagine standing in a classroom, hospital, or job interview and being unable to express yourself because no one understands sign language. Millions experience this every day.
 
-SignComm was born out of a simple yet powerful idea: **What if AI could serve as the universal interpreter, enabling the deaf and mute to be heard—instantly, everywhere?**
+SignComm was born out of a simple yet powerful idea: **What if AI could serve as the universal interpreter, enabling the deaf and mute to be heard instantly, everywhere?**
 
 ---
 
@@ -156,6 +156,7 @@ D --> G[Sign Animation]
 
 > *“SignComm is more than technology it’s empathy coded into algorithms.
 > We’re not just translating signs; we’re amplifying voices.”*
+
 
 
 
