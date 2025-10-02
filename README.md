@@ -145,8 +145,7 @@ D --> G[Sign Animation]
 
 ## 👨‍💻 Author
 
-**Naresh B A** 
-💻 Full Stack & AI/ML Enthusiast | 🚀 Innovator
+**Naresh B A** | 💻 Full Stack & AI/ML Enthusiast | 🚀 Innovator
 
 * 🌐 [Portfolio](https://naresh-portfolio-007.netlify.app/)
 * 💼 [LinkedIn](www.linkedin.com/in/naresh-b-a-1b5331243)
@@ -155,8 +154,9 @@ D --> G[Sign Animation]
 
 ## ⚡ Closing Note
 
-> *“SignComm is more than technology—it’s empathy coded into algorithms.
+> *“SignComm is more than technology it’s empathy coded into algorithms.
 > We’re not just translating signs; we’re amplifying voices.”*
+
 
 
 
