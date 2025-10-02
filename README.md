@@ -1,5 +1,5 @@
 # 👐 SignComm – AI-Powered Sign Language Translator
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge\&logo=flask\&logoColor=white)![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge\&logo=tensorflow\&logoColor=white)![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge\&logo=opencv\&logoColor=white)![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase\&logoColor=black)![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge\&logo=google\&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge\&logo=flask\&logoColor=white)![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge\&logo=tensorflow\&logoColor=white) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge\&logo=opencv\&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase\&logoColor=black) ![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge\&logo=google\&logoColor=white)
 
 > **Bridging Silence with Intelligence**
 > SignComm is an AI-driven real-time sign language translator designed to break down the communication barriers faced by the deaf and mute community. By combining **computer vision, deep learning, and generative AI**, it enables seamless two-way communication between signers and non-signers.
@@ -7,7 +7,7 @@
 
 ## 💡 Inspiration
 
-Imagine standing in a classroom, hospital, or job interview—and being unable to express yourself because no one understands sign language. Millions experience this every day.
+Imagine standing in a classroom, hospital, or job interview and being unable to express yourself because no one understands sign language. Millions experience this every day.
 
 SignComm was born out of a simple yet powerful idea: **What if AI could serve as the universal interpreter, enabling the deaf and mute to be heard—instantly, everywhere?**
 
@@ -156,5 +156,6 @@ D --> G[Sign Animation]
 
 > *“SignComm is more than technology—it’s empathy coded into algorithms.
 > We’re not just translating signs; we’re amplifying voices.”*
+
 
 
