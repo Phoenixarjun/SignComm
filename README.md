@@ -88,7 +88,8 @@ D --> G[Sign Animation]
 
 ![2](https://github.com/user-attachments/assets/618cce14-2132-4bc5-9fbf-57aaf8b91fb3)
 
-![2](https://github.com/user-attachments/assets/cc4c799f-b44b-4545-b322-651d64e817ec)
+![3](https://github.com/user-attachments/assets/dda1a13a-f1fe-4e1f-bbe3-df1c42e62b4a)
+
 
 ---
 
@@ -144,8 +145,8 @@ D --> G[Sign Animation]
 
 ## 👨‍💻 Author
 
-**Naresh B A**
-🎓 B.Tech IT | 💻 Full Stack & AI/ML Enthusiast | 🚀 Innovator
+**Naresh B A** 
+💻 Full Stack & AI/ML Enthusiast | 🚀 Innovator
 
 * 🌐 [Portfolio](https://naresh-portfolio-007.netlify.app/)
 * 💼 [LinkedIn](www.linkedin.com/in/naresh-b-a-1b5331243)
@@ -156,6 +157,7 @@ D --> G[Sign Animation]
 
 > *“SignComm is more than technology—it’s empathy coded into algorithms.
 > We’re not just translating signs; we’re amplifying voices.”*
+
 
 
 
